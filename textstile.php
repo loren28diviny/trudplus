@@ -1,9 +1,11 @@
 <?php
 class stytxt
 {
-	public $homepage = file_get_contents('./text');
+	public $homepage;
 	function __construct()
-	{}
+	
+	
+	{$homepage = file_get_contents('./text');}
 }
 
 ?>
