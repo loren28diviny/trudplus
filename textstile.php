@@ -1,11 +1,19 @@
 <?php
 class stytxt
 {
-	public $homepage;
-	function __construct()
-	
-	
-	{$homepage = file_get_contents('./text');}
+	protected  $text;
+	protected  $style;
+	function __construct($text, $style)
+	{
+		$this->text=$text;
+		$this->style=$style;
+	}
+
+	function s_echo()
+	{
+		echo(file_get_contents($text));
+    }
+
 }
 
 ?>
