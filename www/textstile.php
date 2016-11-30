@@ -1,17 +1,22 @@
 <?php
-class stytxt
+//setlocale(LC_CTYPE, 'ru_RU');
+class TextGui
 {
-	protected  $text;
-	protected  $style;
-	function __construct($text, $style)
+	public   $text;
+	//protected  $style;
+	function TextGui($text, $style)
 	{
-		$this->text=$text;
-		$this->style=$style;
+		$this->text=file($text);
+		$this->style=file_get_contents($style);
+		
 	}
 
-	function s_echo()
+	 function Text_echo()
 	{
-		echo(file_get_contents($text));
+		foreach ($this->text as $sb) {
+		
+		echo $sb;
+		}
     }
 
 }

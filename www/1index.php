@@ -1,3 +1,4 @@
 <?php
-echo ("chokak");
+$a=get_include_path();
+echo $a;
 ?>
