@@ -4,7 +4,7 @@
 <head>
 <link href="style.css" rel="stylesheet">
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
-<title>Охрана Труда</title>
+<title>РћС…СЂР°РЅР° РўСЂСѓРґР°</title>
 </head>
 <body>
 <div>
