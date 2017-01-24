@@ -1,21 +1,28 @@
 <!DOCTYPE html>
+
+
 <html>
 <head>
 <link href="style.css" rel="stylesheet">
 <meta http-equiv="Content-Type"
-	content="text/html; charset=windows-1251" />
-<title>Охрана Труда</title>
+	content="text/html; charset=utf-8" />
+<?php 
+setlocale(LC_ALL, 'ru_RU.UTF-8');
+?>
+<title>РћС…СЂР°РЅР° РўСЂСѓРґР°</title>
 </head>
 <body>
-<?php readfile("signin/form.html")?>
-<?php readfile("Menu/menu.html")?>
-<?php
-	//<div>
-// setlocale(LC_ALL, 'ru_RU.UTF-8');
+<body>
+<?php readfile("signin/form.html");?>
+<?php readfile("Menu/menu.html");?>
+
+<div>
+<?php 
 //include_once 'textstile.php';
 //$TxT = new TextGui ( "my", "style.css" );
 //$TxT->Text_echo ();
-//</div>
 ?>
+</div>
+
 </body>
 </html>
