@@ -1,0 +1,3 @@
+<?php
+$size_display;
+?>

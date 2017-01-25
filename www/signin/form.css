@@ -1,21 +1,22 @@
 @CHARSET "UTF-8";
 form.bordlog {
-	display: block;
  width: 200px;
    top: 200px;
-   right:840px;
+   left:840px;
 	background: #fc0; /* Цвет фона */
     width: 150px; /* Ширина блока */
     padding: 10px; /* Поля */
     border: 2px solid #000; /* Параметры рамки */
      -moz-box-sizing: border-box; /* Для Firefox */ 
    box-size: border-box;
-
-text-align: left;
- font-size: small;
- display:inline-block;
+   position: absolute;
+/*text-align: left;*/
+ /*font-size: small;*/
  
  
 }
-input {width: 100px;
+input.field {width: 100px; align: right;
+}
+div.fieldq {
+	text-align: left;
 }
