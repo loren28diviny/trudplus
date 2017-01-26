@@ -12,10 +12,10 @@
 <title>Охрана Труда</title>
 </head>
 <body>
-<body>
-
+<script src="javascript/windowWidth.js"></script>
 <div class="back">
-<?php readfile("signin/form.html");?>
+<?php readfile("signin/form.html");
+?>
 <?php readfile("Menu/menu.html");?>
 <?php 
 //include_once 'textstile.php';
