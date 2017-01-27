@@ -10,8 +10,10 @@
 		setlocale(LC_ALL, 'ru_RU.UTF-8');
 		?>
 <title>Охрана Труда</title>
+
 </head>
 <body>
+
 <script src="javascript/windowWidth.js"></script>
 <div class="back">
 <?php readfile("signin/form.html");
