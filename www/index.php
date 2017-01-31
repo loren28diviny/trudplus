@@ -17,8 +17,10 @@
 
 </head>
 <body>
-<script>if  (screen.width <= '1024')
+<script>if  (screen.width < '1024')
    document.write('<link href="style/Mobile/style.css" rel="stylesheet" type="text/css">'); 
+if  (screen.width == '1024')
+	   document.write('<link href="style/1024px/style.css" rel="stylesheet" type="text/css">'); 
  if(screen.width > '1024') 
 	 document.write('<link href="style/PC/style.css" rel="stylesheet" type="text/css">');  
 </script>

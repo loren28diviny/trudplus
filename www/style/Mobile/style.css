@@ -7,7 +7,7 @@ div.back {
     height: 1280px;
 	background-color: rgb(26, 50, 117);
 	 opacity: 0.7;
-	 background-position: top center;
+	/* background-position: top center;*/
 	position: relative;
 	 top: 0;
     right: 0;
