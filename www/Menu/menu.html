@@ -1,7 +1,12 @@
 
-<head>
-<link href="Menu/menu.css" rel="stylesheet" type="text/css"></head>
-<menu type="toolbar" class="bord"><p>Главная</p>
+<script>if  (screen.width <= '1024')
+   document.write('<link href="style/Mobile/menu.css" rel="stylesheet" type="text/css">'); 
+ if(screen.width > '1024') 
+	 document.write('<link href="style/PC/menu.css" rel="stylesheet" type="text/css">');  
+</script>
+
+<menu type="toolbar" class="bord">
+<p>Главная</p>
 <p>Прайс - лист</p>
 <p>Контакты</p>
 <details><summary>Каталог</summary>
@@ -16,16 +21,11 @@
 <details>
 <summary>СИЗ</summary>
 <p>Электрозащита</p>
-<p>Средства защиты
- органов дыхания</p>
-<p>Средства защиты
- органов слуха</p>
-<p>Средства защиты
- головы</p>
-<p>Средства защиты
- рук</p>
-<p>Средства защиты
- при работе на высоте</p></details>
+<p>Средства защиты органов дыхания</p>
+<p>Средства защиты органов слуха</p>
+<p>Средства защиты головы</p>
+<p>Средства защиты рук</p>
+<p>Средства защиты при работе на высоте</p></details>
 <details>
 <summary>Литература</summary>
 <p>Журналы</p>

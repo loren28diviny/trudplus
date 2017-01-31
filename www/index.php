@@ -3,7 +3,11 @@
 
 <html>
 <head>
-<link href="style.css" rel="stylesheet">
+<script>//if (screen.width <= '1024') 
+ //  document.write ('<link href="style/mobile/menu.css" rel="stylesheet" type="text/css">'); 
+   //else if (screen.width > '1024') document.write ('<link href="PC/mobile/menu.css" rel="stylesheet" type="text/css">');  
+</script>
+
 <meta http-equiv="Content-Type"
 		content="text/html; charset=utf-8" />
 		<?php
@@ -13,12 +17,17 @@
 
 </head>
 <body>
+<script>if  (screen.width <= '1024')
+   document.write('<link href="style/Mobile/style.css" rel="stylesheet" type="text/css">'); 
+ if(screen.width > '1024') 
+	 document.write('<link href="style/PC/style.css" rel="stylesheet" type="text/css">');  
+</script>
 
-<script src="javascript/windowWidth.js"></script>
 <div class="back">
 <?php readfile("signin/form.html");
 ?>
 <?php readfile("Menu/menu.html");?>
+<?php //readfile("Menu/topMenu.html");?>
 <?php 
 //include_once 'textstile.php';
 //$TxT = new TextGui ( "my", "style.css" );
@@ -27,4 +36,5 @@
 </div>
 
 </body>
+
 </html>

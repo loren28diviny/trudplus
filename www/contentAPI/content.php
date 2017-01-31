@@ -1,7 +1,11 @@
 <?php
 
-$name="lol";
+$name;
 $category;
+$subcategory;
+$price;
+$photo;
+
 
 
 $fp = fopen("$name.html", "w");

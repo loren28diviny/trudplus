@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+form.bordlog {
+ width: 200px;
+   top: 200px;
+   right:10px;
+	background: #fc0; /* Цвет фона */
+    width: 150px; /* Ширина блока */
+    padding: 10px; /* Поля */
+    border: 2px solid #000; /* Параметры рамки */
+     -moz-box-sizing: border-box; /* Для Firefox */ 
+   box-size: border-box;
+   position: absolute;
+text-align: left;
+ *font-size: small;
+ 
+ 
+}
+input.field {width: 100px; align: right;
+}
+div.fieldq {
+	text-align: left;
+}

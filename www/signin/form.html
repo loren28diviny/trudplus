@@ -1,6 +1,8 @@
-
-<head>
-<link href="signin/form.css" rel="stylesheet" type="text/css"></head>
+<script>if  (screen.width <= '1024')
+   document.write('<link href="style/Mobile/form.css" rel="stylesheet" type="text/css">'); 
+ if(screen.width > '1024') 
+	 document.write('<link href="style/PC/form.css" rel="stylesheet" type="text/css">');  
+</script>
 <form class="bordlog" action="foo.php" method="post">
  <div>Логин</div><input class="field" type="text" name="fname" ><br>
  <div>Пароль</div><input class="field" type="password" name="lname" ><br>
