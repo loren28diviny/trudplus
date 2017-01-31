@@ -2,7 +2,7 @@
 form.bordlog {
  width: 200px;
    top: 200px;
-   left:840px;
+   right:10px;
 	background: #fc0; /* Цвет фона */
     width: 150px; /* Ширина блока */
     padding: 10px; /* Поля */
