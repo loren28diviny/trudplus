@@ -10,7 +10,7 @@ menu.bord {
     -moz-box-sizing: border-box; /* Для Firefox */  
    box-sizing: border-box; /* Ширина блока с полями */
   
-/*margin:200px 5px 15px 20px;*/
+margin:200px 5px 15px 20px;
 text-align: left;
  font-size: small;
   display:inline-block;

@@ -1,1 +1,19 @@
 @CHARSET "UTF-8";
+menu.bord {
+	
+  
+   top: 200px;
+	background: #fc0; /* Цвет фона */
+    width: 150px; /* Ширина блока */
+    padding: 10px; /* Поля */
+    border: 2px solid #000; /* Параметры рамки */
+    -moz-box-sizing: border-box; /* Для Firefox */  
+   box-sizing: border-box; /* Ширина блока с полями */
+  
+margin:200px 5px 15px 20px;
+text-align: left;
+ font-size: small;
+  display:inline-block;
+  position: absolute;
+  
+}
