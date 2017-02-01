@@ -1,7 +1,12 @@
 <script>
-function ueu(){alert( "lol" );} 
+function definition()
+{
+
+	alert( this.value );
+	return this.value;
+	} 
 </script>
-<form><input name="main" list="category" id="main" onChange="ueu()">
+<form><input name="main" list="category" id="main" onChange="definition()">
  
 <datalist id="category">
   <option value="Рабочая одежда">
