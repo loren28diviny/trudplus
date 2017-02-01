@@ -1,12 +1,14 @@
+ <meta charset="utf-8">
 <script>
 function definition()
 {
 
-	alert( this.value );
-	return this.value;
+	var text = document.getElementsByTagName("input")[0];
+	var val = text.value;
+	alert(val);
 	} 
 </script>
-<form><input name="main" list="category" id="main" onChange="definition()">
+<form><input name="main" list="category" id="main" oninput="definition()">
  
 <datalist id="category">
   <option value="Рабочая одежда">
