@@ -1,37 +1,38 @@
  <meta charset="utf-8">
-<script>
-function definition()
-{
-
-	var text = document.getElementsByTagName("input")[0];
-	var val = text.value;
-	alert(val);
-	} 
-</script>
-<form><input name="main" list="category" id="main" oninput="definition()">
+<script src="script.js"></script>
+<style>
+main{}
+#clothing{display:none;}
+#shoes{display:none;}
+#ESafety{display:none;}
+#litter{display:none;}
+#ClothInd{display:none;}
+#another{display:none;}
+</style>
+<form><input name="main" list="category" id="main" oninput="definition(this)">
  
 <datalist id="category">
-  <option value="Рабочая одежда">
-  <option value="Рабочая обувь">
-  <option value="СИЗ">
-  <option value="Литература">
-  <option value="Швейное производство">
-  <option value="Другое">
+  <option id="po" value="Рабочая одежда">
+  <option id="ro" value="Рабочая обувь">
+  <option id="siz" value="СИЗ">
+  <option id="lit" value="Литература">
+  <option id="shv" value="Швейное производство">
+  <option id="drg" value="Другое">
 </datalist> </form>
 <form>
- <input list="Рабочая Одежда">
+ <input id="clothing" list="Рабочая Одежда">
 <datalist id="Рабочая Одежда">
   <option value="Летняя Одежда">
   <option value="Зимняя Одежда">
 </datalist> </form>
 <form>
-<input list="Рабочая Обувь">
+<input id="shoes" list="Рабочая Обувь">
  
 <datalist id="Рабочая Обувь">
   <option value="Летняя Обувь">
   <option value="Зимняя Обувь">
 </datalist> </form>
-<form><input list="СИЗ">
+<form><input id="ESafety" list="СИЗ">
  
 <datalist id="СИЗ">
   <option value="Электрозащита">
@@ -41,13 +42,13 @@ function definition()
   <option value="Средства защиты рук">
   <option value="Средства защиты при работе на высоте">
 </datalist> </form>
-<form><input list="Литература">
+<form><input id="litter" list="Литература">
  
 <datalist id="Литература">
   <option value="Журналы">
   <option value="Книги">
 </datalist> </form>
-<form><input list="Швейное производство">
+<form><input id="ClothInd" list="Швейное производство">
  
 <datalist id="Швейное производство">
   <option value="Электрозащита">
@@ -55,7 +56,7 @@ function definition()
   <option value="Сертификаты соответствия">
   <option value="Методы ухода за тканями">
 </datalist> </form>
-<form><input list="Другое">
+<form><input id="another" list="Другое">
  
 <datalist id="Другое">
   <option value="Плакаты">
