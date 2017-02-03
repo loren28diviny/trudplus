@@ -7,23 +7,29 @@ function definition(o)
 	
   switch (true){
    case (document.getElementById('po').value==o.value):
-       alert("lol");
+	   document.getElementById('clothing').style.display="inline";
    break;
-   case (document.getElementById('ro').value==o.value) :
-	   alert("lol");
+   case (document.getElementById('shoes').value==o.value) :
+	   document.getElementById('shoes').style.display="inline";
    break;
    case (document.getElementById('siz').value==o.value ):
-	   alert("lol");
+	   document.getElementById('ESafety').style.display="inline";
    break;
    case (document.getElementById('lit').value==o.value) :
-	   alert("lol");
+	   document.getElementById('litter').style.display="inline";
    break;
    case (document.getElementById('shv').value==o.value) :
-	   alert("lol");
+	   document.getElementById('ClothInd').style.display="inline";
    break;
    case (document.getElementById('drg').value==o.value) :
-	   alert("lol");
+	   document.getElementById('another').style.display="inline";
    break;
    default:
-	   alert("nelol");}
+	   document.getElementById('clothing').style.display="none";
+	   document.getElementById('shoes').style.display="none";
+	   document.getElementById('ESafety').style.display="none";
+	   document.getElementById('litter').style.display="none";
+	   document.getElementById('ClothInd').style.display="none";
+	   document.getElementById('another').style.display="none";
+   }
 	} 
