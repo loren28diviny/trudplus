@@ -8,7 +8,10 @@ main{}
 #litter{display:none;}
 #ClothInd{display:none;}
 #another{display:none;}
+#newcategory{display:none}
+#newsubcategory{display:none}
 </style>
+
 <form><input name="main" list="category" id="main" oninput="definition(this)">
  
 <datalist id="category">
@@ -18,21 +21,22 @@ main{}
   <option id="lit" value="Литература">
   <option id="shv" value="Швейное производство">
   <option id="drg" value="Другое">
-</datalist> </form>
-<form>
+  <option id="newCat" value="Новая Категория/Подкатегория">
+</datalist> 
+
  <input id="clothing" list="Рабочая Одежда">
 <datalist id="Рабочая Одежда">
   <option value="Летняя Одежда">
   <option value="Зимняя Одежда">
-</datalist> </form>
-<form>
+</datalist> 
+
 <input id="shoes" list="Рабочая Обувь">
  
 <datalist id="Рабочая Обувь">
   <option value="Летняя Обувь">
   <option value="Зимняя Обувь">
-</datalist> </form>
-<form><input id="ESafety" list="СИЗ">
+</datalist> 
+<input id="ESafety" list="СИЗ">
  
 <datalist id="СИЗ">
   <option value="Электрозащита">
@@ -41,25 +45,31 @@ main{}
   <option value="Средства защиты головы">
   <option value="Средства защиты рук">
   <option value="Средства защиты при работе на высоте">
-</datalist> </form>
-<form><input id="litter" list="Литература">
+</datalist> 
+<input id="litter" list="Литература">
  
 <datalist id="Литература">
   <option value="Журналы">
   <option value="Книги">
-</datalist> </form>
-<form><input id="ClothInd" list="Швейное производство">
+</datalist> 
+<input id="ClothInd" list="Швейное производство">
  
 <datalist id="Швейное производство">
   <option value="Электрозащита">
   <option value="Ткани">
   <option value="Сертификаты соответствия">
   <option value="Методы ухода за тканями">
-</datalist> </form>
-<form><input id="another" list="Другое">
+</datalist> 
+<input id="another" list="Другое">
  
 <datalist id="Другое">
   <option value="Плакаты">
   <option value="Знаки">
   <option value="Инвентарь">
-</datalist> </form>
+</datalist> 
+
+<input id="newcategory" list="Новая категория">
+<input id="newsubcategory"></form>
+
+
+

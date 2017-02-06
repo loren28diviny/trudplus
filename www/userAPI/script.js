@@ -9,7 +9,7 @@ function definition(o)
    case (document.getElementById('po').value==o.value):
 	   document.getElementById('clothing').style.display="inline";
    break;
-   case (document.getElementById('shoes').value==o.value) :
+   case (document.getElementById('ro').value==o.value) :
 	   document.getElementById('shoes').style.display="inline";
    break;
    case (document.getElementById('siz').value==o.value ):
@@ -24,6 +24,10 @@ function definition(o)
    case (document.getElementById('drg').value==o.value) :
 	   document.getElementById('another').style.display="inline";
    break;
+   case (document.getElementById('newCat').value==o.value) :
+	   document.getElementById('newcategory').style.display="inline";
+       document.getElementById('newsubcategory').style.display="inline";
+   break;
    default:
 	   document.getElementById('clothing').style.display="none";
 	   document.getElementById('shoes').style.display="none";
@@ -31,5 +35,7 @@ function definition(o)
 	   document.getElementById('litter').style.display="none";
 	   document.getElementById('ClothInd').style.display="none";
 	   document.getElementById('another').style.display="none";
+	   document.getElementById('newcategory').style.display="none";
+       document.getElementById('newsubcategory').style.display="none";
    }
 	} 
