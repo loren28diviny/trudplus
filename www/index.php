@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<?php include "ProcessorPHP/styleLoader.php";?>
 
 <html>
 <head>
@@ -20,15 +20,15 @@
 <script>if  (screen.width < '1024')
    document.write('<link href="style/Mobile/style.css" rel="stylesheet" type="text/css">'); 
 if  (screen.width == '1024')
-	   document.write('<link href="style/1024px/style.css" rel="stylesheet" type="text/css">'); 
+	   <?php styleLoader(MenuSL1024)?>;
  if(screen.width > '1024') 
 	 document.write('<link href="style/PC/style.css" rel="stylesheet" type="text/css">');  
 </script>
 
 <div class="back">
-<?php readfile("signin/form.html");
+<?php readfile("GUI/signin/form.html");
 ?>
-<?php readfile("Menu/menu.html");?>
+<?php readfile("GUI/Menu/menu.html");?>
 <?php //readfile("Menu/topMenu.html");?>
 <?php 
 //include_once 'textstile.php';
