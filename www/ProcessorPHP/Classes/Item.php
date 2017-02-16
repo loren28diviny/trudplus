@@ -1,11 +1,35 @@
 <?php
-class Item
+
+class Item 
 {
+	protected static $begin;
+	protected static $end;
+	protected static $ctgry;
+	protected static $sctgry;
+	protected static $dscrpt;
+	protected static $photopth;
+	protected static $ED;
 	private $category;
 	private $subcategory;
 	private $itname;
 	private $photo;
 	private $description;
+	private $arr;
+	public function __construct($ED="\r\n",$begin="BnName: ", $end="EdName: ",$ctgry="Category: ",$sctgry="SCategory: ",$dscrpt="Description: ",$photopth="PathPhoto: ")
+	{
+		$this->begin=$begin;
+		$this->end=$end;
+		$this->ctgry=$ctgry;
+		$this->sctgry=$sctgry;
+		$this->dscrpt=$dscrpt;
+		$this->photopth=$photopth;
+		$this->ED=$ED;
+		$this->arr=array($this->begin=>$this->itname,
+				$this->ctgry=>$this->category,
+				$this->sctgry=>$this->subcategory,
+				$this->photopth=>$this->photo,
+				$this->dscrpt=>$this->description);
+	}
 	public function getData( $category, $subcategory, $itname, $photo, $description)
 	{
 		$this->category=$category;
@@ -27,11 +51,17 @@ class Item
 	
 	public function writeData()
 	{
+		
 		$lal="'$this->category'.txt";
-		$string="$this->itname\n\t$this->category\n\t$this->subcategory\n\t$this->photo\n\t$this->description\r\n";
+		$string="$this->begin$this->itname$this->ED$this->ctgry$this->category$this->ED$this->sctgry$this->subcategory$this->ED$this->photopth$this->photo$this->ED$this->dscrpt$this->description$this->ED$this->end$this->itname$this->ED$this->ED";
 		$fp = fopen($lal, 'a');
 		fwrite($fp, $string);
 		fclose($fp);
+		
+	}
+	
+	public function getfromfile ()
+	{
 		
 	}
 	
