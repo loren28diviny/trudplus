@@ -43,7 +43,8 @@ if  (screen.width == '1024')
 	$a->getData('ol', 'dfdf', 'dfdfd', 'sdsds', 'sdsdsdddc');
 	$a->writeData();
 	$a->getData('ol', 'd12121212fdf', 'dfdf121212d', 'sd12121212sds', 'sdsds22232323dddc');
-	$a->writeData();?>
+	$a->writeData();
+	$a->getfromfile();?>
 <?php 
 
 ?>

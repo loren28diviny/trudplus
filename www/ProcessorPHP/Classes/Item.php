@@ -2,33 +2,40 @@
 
 class Item 
 {
-	protected static $begin;
 	protected static $end;
 	protected static $ctgry;
 	protected static $sctgry;
 	protected static $dscrpt;
 	protected static $photopth;
 	protected static $ED;
+	protected static $EQ;
+	protected static $ob;
+	protected static $cb;
+	protected static $ov;
+	protected static $cv;
 	private $category;
 	private $subcategory;
 	private $itname;
 	private $photo;
 	private $description;
 	private $arr;
-	public function __construct($ED="\r\n",$begin="BnName: ", $end="EdName: ",$ctgry="Category: ",$sctgry="SCategory: ",$dscrpt="Description: ",$photopth="PathPhoto: ")
+	public function __construct($ov='"',$cb=']',$ob='[',$ED="\r\n", $end="endconf;",$ctgry="Category=",$sctgry="SCategory=",$dscrpt="Description=",$photopth="PathPhoto=")
 	{
-		$this->begin=$begin;
 		$this->end=$end;
 		$this->ctgry=$ctgry;
 		$this->sctgry=$sctgry;
 		$this->dscrpt=$dscrpt;
 		$this->photopth=$photopth;
 		$this->ED=$ED;
+		$this->cb=$cb;
+		$this->ob=$ob;
+		$this->ov=$ov;
 		$this->arr=array($this->begin=>$this->itname,
-				$this->ctgry=>$this->category,
-				$this->sctgry=>$this->subcategory,
-				$this->photopth=>$this->photo,
-				$this->dscrpt=>$this->description);
+						 $this->ctgry=>$this->category,
+						 $this->sctgry=>$this->subcategory,
+						 $this->photopth=>$this->photo,
+						 $this->dscrpt=>$this->description);
+		
 	}
 	public function getData( $category, $subcategory, $itname, $photo, $description)
 	{
@@ -51,9 +58,10 @@ class Item
 	
 	public function writeData()
 	{
-		
-		$lal="'$this->category'.txt";
-		$string="$this->begin$this->itname$this->ED$this->ctgry$this->category$this->ED$this->sctgry$this->subcategory$this->ED$this->photopth$this->photo$this->ED$this->dscrpt$this->description$this->ED$this->end$this->itname$this->ED$this->ED";
+	
+		$this->begin="$this->ob$this->itname$this->cb";
+		$lal="bd/'$this->category'.txt";
+		$string="$this->begin$this->ED$this->ctgry$this->ov$this->category$this->ov$this->ED$this->sctgry$this->ov$this->subcategory$this->ov$this->ED$this->photopth$this->ov$this->photo$this->ov$this->ED$this->dscrpt$this->ov$this->description$this->ov$this->ED$this->ED";
 		$fp = fopen($lal, 'a');
 		fwrite($fp, $string);
 		fclose($fp);
@@ -62,7 +70,26 @@ class Item
 	
 	public function getfromfile ()
 	{
+		$dir    = "bd";
+		$filenamearr = scandir($dir);
+		print_r($filenamearr);
+		for ($i=0;$i<=count($filenamearr);$i++)
+		{
+			$sfn=$filenamearr[$i];
+			echo($sfn);
+			$arr = parse_ini_file($sfn, true);
+			foreach($arr as $key => $value)
+			{
+				foreach($arr as $key2 => $valuet)
+				{
+				echo " $valuet <br />";
+				}
+			}
+		}
+		//$files2 = scandir($dir, 1);
 		
+		//print_r($files1);
+		//print_r($files2);
 	}
 	
 	
