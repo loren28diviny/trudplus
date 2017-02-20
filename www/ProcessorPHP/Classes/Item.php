@@ -60,7 +60,7 @@ class Item
 	{
 	
 		$this->begin="$this->ob$this->itname$this->cb";
-		$lal="bd/'$this->category'.txt";
+		$lal="bd/$this->category.ini";
 		$string="$this->begin$this->ED$this->ctgry$this->ov$this->category$this->ov$this->ED$this->sctgry$this->ov$this->subcategory$this->ov$this->ED$this->photopth$this->ov$this->photo$this->ov$this->ED$this->dscrpt$this->ov$this->description$this->ov$this->ED$this->ED";
 		$fp = fopen($lal, 'a');
 		fwrite($fp, $string);
@@ -71,20 +71,36 @@ class Item
 	public function getfromfile ()
 	{
 		$dir    = "bd";
-		$filenamearr = scandir($dir);
+		//$filenamearr = array_diff(scandir($dir), array('..', '.'));
 		print_r($filenamearr);
+		print_r(count($filenamearr));
 		for ($i=0;$i<=count($filenamearr);$i++)
 		{
-			$sfn=$filenamearr[$i];
-			echo($sfn);
-			$arr = parse_ini_file($sfn, true);
-			foreach($arr as $key => $value)
+			echo ($i);
+			print_r($filenamearr[$i]);
+			$this->arr = file("$dir/ol.ini");
+			print_r($this->arr);
+			for($i;$i<count($this->arr);$i++)
 			{
-				foreach($arr as $key2 => $valuet)
+				$string=$this->arr[$i];
+				for ($a=0;$a<strlen($string);$a++)
 				{
-				echo " $valuet <br />";
+					if($string{$a}="[")
+					{
+						do{$a++;$b=0; $this->itname{$b}=$string{$a};$b++;}while($string{$a}!=']');
+					}
+					switch ($string{$a})
+					{
+						case "[" :
+							{do{$a++;$b=0; $this->itname{$b}=$string{$a};$b++;}while($string{$a}!=']');}
+						continue;
+						
+						case  :
+					}
 				}
+				
 			}
+			
 		}
 		//$files2 = scandir($dir, 1);
 		

@@ -40,9 +40,9 @@ if  (screen.width == '1024')
 ?>
 <?php readfile("GUI/Menu/menu.html");?>
 <?php $a=new Item();
-	$a->getData('ol', 'dfdf', 'dfdfd', 'sdsds', 'sdsdsdddc');
+	$a->getData("ol", 'dfdf', 'dfdfd', 'sdsds', 'sdsdsdddc');
 	$a->writeData();
-	$a->getData('ol', 'd12121212fdf', 'dfdf121212d', 'sd12121212sds', 'sdsds22232323dddc');
+	$a->getData("ol", 'd12121212fdf', 'dfdf121212d', 'sd12121212sds', 'sdsds22232323dddc');
 	$a->writeData();
 	$a->getfromfile();?>
 <?php 
